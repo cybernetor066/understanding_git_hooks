@@ -16,6 +16,15 @@
 
 
 
+# This stops commits with empty messages
+COMMIT_MESSAGE=`cat ../COMMIT_EDITMSG`;
+
+if [ $COMMIT_MESSAGE != "" ]
+then
+        echo "Must Have A Commit Msg!"
+        exit 1
+fi
+
 
 
 
